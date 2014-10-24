@@ -10,6 +10,20 @@ import UIKit
 
 
 extension UISegmentedControl {
+    var text: String {
+        return titleForSegmentAtIndex(selectedSegmentIndex) ?? ""
+    }
+
+    func selectFromString(string: String) {
+        for i in 0...numberOfSegments {
+            var t = titleForSegmentAtIndex(i)
+            if t == string {
+                selectedSegmentIndex = i
+                break
+            }
+        }
+    }
+
     func customStyle() {
         var tint = self.tintColor
         self.tintColor = tint.colorWithAlphaComponent(0.2)
@@ -21,7 +35,10 @@ extension UISegmentedControl {
 
 
 extension UIViewController {
-    // expose model to all view controllers
+    var settings: Settings {
+        return (UIApplication.sharedApplication().delegate as AppDelegate).settings
+    }
+
     var currentPatient: Patient? {
         get {
             return (UIApplication.sharedApplication().delegate as AppDelegate).currentPatient
@@ -31,5 +48,4 @@ extension UIViewController {
         }
     }
 }
-
 

@@ -9,9 +9,6 @@
 import UIKit
 
 
-let POUNDS_TO_KILOGRAMS = 0.453592
-
-
 class PatientViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var weightControl: UITextField!
     @IBOutlet weak var unitControl: UISegmentedControl!
@@ -19,21 +16,52 @@ class PatientViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var crashButton: UIButton!
     var weight = 0.0
     var species: Species?
+    var formatter: NSNumberFormatter = NSNumberFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         unitControl.customStyle()
         speciesControl.customStyle()
+        formatter.maximumFractionDigits = 2
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        weightControl.becomeFirstResponder()
+        readSettings()
+        if currentPatient != nil {
+            readPatient(currentPatient!)
+        }
         weightControl.delegate = self
+        weightControl.becomeFirstResponder()
+    }
+
+    func readSettings() {
+        unitControl.selectFromString(settings.units)
+    }
+
+    func readPatient(patient: Patient) {
+        speciesControl.selectFromString(patient.species.toRaw())
+        weight = kgsToWeight(patient.kgs, unitControl.text)
+        weightControl.text = formatter.stringFromNumber(weight)
+    }
+
+    @IBAction func onUnits() {
+        var newUnits = unitControl.text
+        var oldUnits = {
+            () -> String in
+            switch newUnits {
+            case "kgs": return "lbs"
+            default: return "kgs"
+            }
+        }()
+        settings.units = newUnits
+        var kgs = weightToKgs(weight, oldUnits)
+        weight = kgsToWeight(kgs, newUnits)
+        weightControl.text = formatter.stringFromNumber(weight)
     }
 
     @IBAction func onSpecies() {
-        species = Species.fromRaw(speciesControl.selectedSegmentIndex)
+        species = Species.fromRaw(speciesControl.text)
         checkControls()
     }
 
@@ -51,20 +79,9 @@ class PatientViewController: UIViewController, UITextFieldDelegate {
     }
 
     @IBAction func onCrash() {
-        var units = 0
-        var kgs = 0.0
-        if 0 == unitControl.selectedSegmentIndex {
-            kgs = weight * POUNDS_TO_KILOGRAMS
-        }
-        else {
-            kgs = weight
-        }
+        var kgs = weightToKgs(weight, unitControl.text)
         currentPatient = Patient(species: species!, kgs: kgs)
+        performSegueWithIdentifier("crashSegue", sender: self)
     }
-    
-
-//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-//    }
-
 }
 

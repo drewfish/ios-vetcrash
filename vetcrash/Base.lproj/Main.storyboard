@@ -33,6 +33,9 @@
                                     <segment title="lbs"/>
                                     <segment title="kgs"/>
                                 </segments>
+                                <connections>
+                                    <action selector="onUnits" destination="BYZ-38-t0r" eventType="valueChanged" id="vdu-pw-gJi"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-E9-CDB" userLabel="speciesControl">
                                 <rect key="frame" x="46" y="191" width="228" height="29"/>
@@ -45,8 +48,8 @@
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s3-fv-2x6" userLabel="crashButton">
-                                <rect key="frame" x="219" y="252" width="55" height="22"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <rect key="frame" x="133" y="260" width="55" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Crash"/>
                                 <connections>
                                     <action selector="onCrash" destination="BYZ-38-t0r" eventType="touchUpInside" id="bj5-jW-5EC"/>
@@ -61,11 +64,31 @@
                         <outlet property="speciesControl" destination="Nq0-E9-CDB" id="kt2-Gj-ULr"/>
                         <outlet property="unitControl" destination="CMD-fZ-YPv" id="GLR-Xt-bWc"/>
                         <outlet property="weightControl" destination="0xU-mn-Ik4" id="wlK-7P-7hI"/>
+                        <segue destination="2i9-Tf-33K" kind="show" identifier="crashSegue" id="qMz-vs-SHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="931" y="-557"/>
+        </scene>
+        <!--crash-->
+        <scene sceneID="l2n-jB-30e">
+            <objects>
+                <viewController id="2i9-Tf-33K" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PUY-kr-H7D"/>
+                        <viewControllerLayoutGuide type="bottom" id="u3L-fM-gFb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3cf-4S-Diu">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="crash" id="oZv-qq-cvU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5E9-E8-FkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1616" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xS2-WP-XLg">
