@@ -9,30 +9,6 @@
 import UIKit
 
 
-extension UISegmentedControl {
-    func customStyle() {
-        var tint = self.tintColor
-        self.tintColor = tint.colorWithAlphaComponent(0.2)
-        var atts: [NSObject: AnyObject] = [:]
-        atts[NSForegroundColorAttributeName] = tint
-        self.setTitleTextAttributes(atts, forState: .Normal)
-    }
-}
-
-
-extension UIViewController {
-    // expose model to all view controllers
-    var currentPatient: Patient? {
-        get {
-            return (UIApplication.sharedApplication().delegate as AppDelegate).currentPatient
-        }
-        set {
-            (UIApplication.sharedApplication().delegate as AppDelegate).currentPatient = newValue
-        }
-    }
-}
-
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

@@ -14,6 +14,7 @@
 		6159A0AF19FAC6D600A3A217 /* vetcrashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6159A0AE19FAC6D600A3A217 /* vetcrashTests.swift */; };
 		6159A0B919FAC83B00A3A217 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6159A0B819FAC83B00A3A217 /* PatientViewController.swift */; };
 		6159A0BC19FAD00B00A3A217 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6159A0BB19FAD00B00A3A217 /* Models.swift */; };
+		616B014B19FAE64200657EC3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B014A19FAE64200657EC3 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		6159A0AE19FAC6D600A3A217 /* vetcrashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vetcrashTests.swift; sourceTree = "<group>"; };
 		6159A0B819FAC83B00A3A217 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		6159A0BB19FAD00B00A3A217 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		616B014A19FAE64200657EC3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				6159A09819FAC6D600A3A217 /* AppDelegate.swift */,
+				616B014A19FAE64200657EC3 /* Extensions.swift */,
 				6159A09F19FAC6D600A3A217 /* Images.xcassets */,
 				6159A0A119FAC6D600A3A217 /* LaunchScreen.xib */,
 				6159A09C19FAC6D600A3A217 /* Main.storyboard */,
@@ -218,6 +221,7 @@
 				6159A09919FAC6D600A3A217 /* AppDelegate.swift in Sources */,
 				6159A0BC19FAD00B00A3A217 /* Models.swift in Sources */,
 				6159A0B919FAC83B00A3A217 /* PatientViewController.swift in Sources */,
+				616B014B19FAE64200657EC3 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
