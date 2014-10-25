@@ -33,18 +33,16 @@ func kgsToWeight(kgs: Double, units: String) -> Double {
 }
 
 
-enum Species: String {
-    case Cat = "Cat"
-    case Dog = "Dog"
-}
+//enum Species: String {
+//    case Cat = "Cat"
+//    case Dog = "Dog"
+//}
 
 
 class Patient {
-    var species: Species
     var kgs: Double
 
-    init(species: Species, kgs: Double) {
-        self.species = species
+    init(kgs: Double) {
         self.kgs = kgs
     }
 }

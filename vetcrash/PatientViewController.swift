@@ -12,16 +12,13 @@ import UIKit
 class PatientViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var weightControl: UITextField!
     @IBOutlet weak var unitControl: UISegmentedControl!
-    @IBOutlet weak var speciesControl: UISegmentedControl!
     @IBOutlet weak var crashButton: UIButton!
     var weight = 0.0
-    var species: Species?
     var formatter: NSNumberFormatter = NSNumberFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         unitControl.customStyle()
-        speciesControl.customStyle()
         formatter.maximumFractionDigits = 2
     }
 
@@ -40,7 +37,6 @@ class PatientViewController: UIViewController, UITextFieldDelegate {
     }
 
     func readPatient(patient: Patient) {
-        speciesControl.selectFromString(patient.species.toRaw())
         weight = kgsToWeight(patient.kgs, unitControl.text)
         weightControl.text = formatter.stringFromNumber(weight)
     }
@@ -60,11 +56,6 @@ class PatientViewController: UIViewController, UITextFieldDelegate {
         weightControl.text = formatter.stringFromNumber(weight)
     }
 
-    @IBAction func onSpecies() {
-        species = Species.fromRaw(speciesControl.text)
-        checkControls()
-    }
-
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
         // http://stackoverflow.com/questions/25621496/shouldchangecharactersinrange-called-before-textfield-changes-text-swift
         var t = textField.text as NSString
@@ -75,12 +66,12 @@ class PatientViewController: UIViewController, UITextFieldDelegate {
     }
 
     func checkControls() {
-        crashButton.enabled = (weight > 0.0) && (species != nil)
+        crashButton.enabled = (weight > 0.0)
     }
 
     @IBAction func onCrash() {
         var kgs = weightToKgs(weight, unitControl.text)
-        currentPatient = Patient(species: species!, kgs: kgs)
+        currentPatient = Patient(kgs: kgs)
         performSegueWithIdentifier("crashSegue", sender: self)
     }
 }

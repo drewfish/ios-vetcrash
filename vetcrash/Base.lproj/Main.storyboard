@@ -37,16 +37,6 @@
                                     <action selector="onUnits" destination="BYZ-38-t0r" eventType="valueChanged" id="vdu-pw-gJi"/>
                                 </connections>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Nq0-E9-CDB" userLabel="speciesControl">
-                                <rect key="frame" x="46" y="191" width="228" height="29"/>
-                                <segments>
-                                    <segment title="Cat"/>
-                                    <segment title="Dog"/>
-                                </segments>
-                                <connections>
-                                    <action selector="onSpecies" destination="BYZ-38-t0r" eventType="valueChanged" id="8fi-5h-Xzs"/>
-                                </connections>
-                            </segmentedControl>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2s3-fv-2x6" userLabel="crashButton">
                                 <rect key="frame" x="133" y="260" width="55" height="22"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -61,7 +51,6 @@
                     <navigationItem key="navigationItem" title="patient" id="kU6-oH-pxJ"/>
                     <connections>
                         <outlet property="crashButton" destination="2s3-fv-2x6" id="xDf-Ju-bLq"/>
-                        <outlet property="speciesControl" destination="Nq0-E9-CDB" id="kt2-Gj-ULr"/>
                         <outlet property="unitControl" destination="CMD-fZ-YPv" id="GLR-Xt-bWc"/>
                         <outlet property="weightControl" destination="0xU-mn-Ik4" id="wlK-7P-7hI"/>
                         <segue destination="2i9-Tf-33K" kind="show" identifier="crashSegue" id="qMz-vs-SHq"/>
@@ -71,7 +60,7 @@
             </objects>
             <point key="canvasLocation" x="931" y="-557"/>
         </scene>
-        <!--crash-->
+        <!--drugs-->
         <scene sceneID="l2n-jB-30e">
             <objects>
                 <viewController id="2i9-Tf-33K" sceneMemberID="viewController">
@@ -82,9 +71,21 @@
                     <view key="view" contentMode="scaleToFill" id="3cf-4S-Diu">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Spa-el-5qI" userLabel="tableView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Spa-el-5qI" firstAttribute="top" secondItem="3cf-4S-Diu" secondAttribute="top" id="6Oh-dA-Jf3"/>
+                            <constraint firstItem="Spa-el-5qI" firstAttribute="leading" secondItem="3cf-4S-Diu" secondAttribute="leading" id="OuL-jJ-66I"/>
+                            <constraint firstAttribute="trailing" secondItem="Spa-el-5qI" secondAttribute="trailing" id="cGG-i9-dxk"/>
+                            <constraint firstItem="u3L-fM-gFb" firstAttribute="top" secondItem="Spa-el-5qI" secondAttribute="bottom" id="cfY-gy-XME"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="crash" id="oZv-qq-cvU"/>
+                    <navigationItem key="navigationItem" title="drugs" id="oZv-qq-cvU"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5E9-E8-FkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
