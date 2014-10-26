@@ -14,7 +14,7 @@ class PatientViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var unitControl: UISegmentedControl!
     @IBOutlet weak var crashButton: UIButton!
     var weight = 0.0
-    var formatter: NSNumberFormatter = NSNumberFormatter()
+    var formatter = NSNumberFormatter()
 
     override func viewDidLoad() {
         super.viewDidLoad()
