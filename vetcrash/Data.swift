@@ -13,14 +13,14 @@ let CRASH_SCHEDULE: [Drug] = [
     Drug(
         name: "Epi low",
         doseUnits: "mg",
-        concentration: Concentration(name: "1:10,000", doseUnitsPerBottleUnit: nil, bottleUnits: nil),
+        concentration: Concentration(name: "1:10,000", doseUnitsPerBottleUnit: 0.1, bottleUnits: "ml"),
         doseA: 0.01,
         doseB: nil
     ),
     Drug(
         name: "Epi high",
         doseUnits: "mg",
-        concentration: Concentration(name: "1:1,000", doseUnitsPerBottleUnit: nil, bottleUnits: nil),
+        concentration: Concentration(name: "1:1,000", doseUnitsPerBottleUnit: 1, bottleUnits: "ml"),
         doseA: 0.1,
         doseB: nil
     ),

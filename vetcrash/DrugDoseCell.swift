@@ -20,12 +20,29 @@ class DrugDoseCell: UITableViewCell {
     func setDrugDose(dose: DrugDose) {
         nameLabel.text = dose.drug
         concentrationLabel.text = dose.concentration
-        doseAQuantityLabel.text = DOSE_FORMATTER.stringFromNumber(dose.doseA.quantity)
         doseAUnitsLabel.text = dose.doseA.units
-        if doseBQuantityLabel != nil {
-            doseBQuantityLabel.text = DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)
-            doseBUnitsLabel.text = dose.doseB!.units
+
+        var doseA = DOSE_FORMATTER.stringFromNumber(dose.doseA.quantity)
+        if let b = dose.doseB {
+            if doseBQuantityLabel != nil {
+                doseBQuantityLabel.text = DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)
+                if doseBUnitsLabel != nil {
+                    doseBUnitsLabel.text = dose.doseB!.units
+                }
+            }
+            else {
+                doseA = doseA + " - " + DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)
+            }
         }
+        else {
+            if doseBQuantityLabel != nil {
+                doseBQuantityLabel.text = ""
+            }
+            if doseBUnitsLabel != nil {
+                doseBUnitsLabel.text = ""
+            }
+        }
+        doseAQuantityLabel.text = doseA
     }
 }
 

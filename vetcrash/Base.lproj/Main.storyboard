@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9M4-0d-d36">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -247,6 +248,128 @@
                                             <outlet property="doseBQuantityLabel" destination="qTA-pb-cpW" id="bPg-iK-vAa"/>
                                             <outlet property="doseBUnitsLabel" destination="YvN-aG-YX4" id="fDP-fY-GGL"/>
                                             <outlet property="nameLabel" destination="716-Gq-FHz" id="tJj-8X-bza"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugDoseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugDoseCell" rowHeight="58" id="7GL-ru-1cI" customClass="DrugDoseCell" customModule="vetcrash" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7GL-ru-1cI" id="59c-AM-TNk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-6D-Kbv" userLabel="nameLabel">
+                                                    <rect key="frame" x="300" y="8" width="46.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="kAc-jm-aa0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jp9-ck-KiH" userLabel="doseAQuantityLabel">
+                                                    <rect key="frame" x="238" y="8" width="53.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="0L8-pa-2Uu"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Na-Rb-AIx" userLabel="doseAUnitsLabel">
+                                                    <rect key="frame" x="253" y="25" width="38.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="eKz-cj-Gbo"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYG-ca-eNt" userLabel="concentrationLabel">
+                                                    <rect key="frame" x="558" y="25" width="33.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="BA6-b5-1JN"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="EYG-ca-eNt" secondAttribute="trailing" id="IvN-gM-PES"/>
+                                                <constraint firstItem="0Na-Rb-AIx" firstAttribute="trailing" secondItem="jp9-ck-KiH" secondAttribute="trailing" id="RXw-HL-FGZ"/>
+                                                <constraint firstItem="0Na-Rb-AIx" firstAttribute="top" secondItem="jp9-ck-KiH" secondAttribute="bottom" constant="-4" id="aSo-Jk-pFu"/>
+                                                <constraint firstItem="EYG-ca-eNt" firstAttribute="top" secondItem="JyI-6D-Kbv" secondAttribute="bottom" constant="-4" id="bWj-fi-zsp"/>
+                                                <constraint firstItem="JyI-6D-Kbv" firstAttribute="top" secondItem="59c-AM-TNk" secondAttribute="topMargin" id="n1R-rH-838"/>
+                                                <constraint firstItem="jp9-ck-KiH" firstAttribute="top" secondItem="59c-AM-TNk" secondAttribute="topMargin" id="ogI-mi-9OK"/>
+                                                <constraint firstItem="JyI-6D-Kbv" firstAttribute="leading" secondItem="jp9-ck-KiH" secondAttribute="trailing" constant="8" id="uGR-5n-Op0"/>
+                                                <constraint firstItem="JyI-6D-Kbv" firstAttribute="leading" secondItem="59c-AM-TNk" secondAttribute="centerX" id="xVO-bf-oP6"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="concentrationLabel" destination="EYG-ca-eNt" id="hj2-er-yZ6"/>
+                                            <outlet property="doseAQuantityLabel" destination="jp9-ck-KiH" id="gzH-SI-tJ2"/>
+                                            <outlet property="doseAUnitsLabel" destination="0Na-Rb-AIx" id="m4K-jn-Yef"/>
+                                            <outlet property="nameLabel" destination="JyI-6D-Kbv" id="Qfq-Uz-M5q"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugDose2Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugDose2Cell" rowHeight="58" id="5Mh-t4-faE" customClass="DrugDoseCell" customModule="vetcrash" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Mh-t4-faE" id="s4H-j3-mvx">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxf-j7-6mt" userLabel="nameLabel">
+                                                    <rect key="frame" x="8" y="8" width="46.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="wrP-gX-ifK"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8n-eM-uoC" userLabel="doseAQuantityLabel">
+                                                    <rect key="frame" x="70" y="8" width="53.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="pjf-ny-xJH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG4-Jq-nYS" userLabel="concentrationLabel">
+                                                    <rect key="frame" x="16" y="25" width="33.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="upZ-gs-yCM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzG-Vt-orv" userLabel="doseAUnitsLabel">
+                                                    <rect key="frame" x="125.5" y="10" width="38.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="BLg-Kj-2aX"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FzG-Vt-orv" firstAttribute="baseline" secondItem="j8n-eM-uoC" secondAttribute="baseline" constant="3" id="1Mn-ee-j1g"/>
+                                                <constraint firstItem="FzG-Vt-orv" firstAttribute="leading" secondItem="j8n-eM-uoC" secondAttribute="trailing" constant="2" id="Cda-oo-QqB"/>
+                                                <constraint firstItem="oG4-Jq-nYS" firstAttribute="top" secondItem="Jxf-j7-6mt" secondAttribute="bottom" constant="-4" id="GhO-56-5af"/>
+                                                <constraint firstItem="Jxf-j7-6mt" firstAttribute="leading" secondItem="s4H-j3-mvx" secondAttribute="leadingMargin" id="PCZ-8s-OIU"/>
+                                                <constraint firstItem="oG4-Jq-nYS" firstAttribute="leading" secondItem="s4H-j3-mvx" secondAttribute="leadingMargin" constant="8" id="aZ1-1O-Wdp"/>
+                                                <constraint firstItem="j8n-eM-uoC" firstAttribute="leading" secondItem="Jxf-j7-6mt" secondAttribute="trailing" constant="16" id="caV-2n-8VM"/>
+                                                <constraint firstItem="j8n-eM-uoC" firstAttribute="top" secondItem="s4H-j3-mvx" secondAttribute="topMargin" id="f4M-ET-FJ4"/>
+                                                <constraint firstItem="Jxf-j7-6mt" firstAttribute="top" secondItem="s4H-j3-mvx" secondAttribute="topMargin" id="uVe-1g-QRi"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="concentrationLabel" destination="oG4-Jq-nYS" id="HaJ-OE-tnf"/>
+                                            <outlet property="doseAQuantityLabel" destination="j8n-eM-uoC" id="jk0-nm-VbH"/>
+                                            <outlet property="doseAUnitsLabel" destination="FzG-Vt-orv" id="tzi-Dx-2ys"/>
+                                            <outlet property="nameLabel" destination="Jxf-j7-6mt" id="e4L-nz-U10"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
