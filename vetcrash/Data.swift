@@ -55,7 +55,7 @@ let CRASH_SCHEDULE: [Drug] = [
     Drug(
         name: "Dextrose",
         doseUnits: "ml",
-        concentration: nil,
+        concentration: Concentration(name: "50%", doseUnitsPerBottleUnit: nil, bottleUnits: nil),
         doseA: 1,
         doseB: nil
     )
