@@ -53,13 +53,6 @@ let CRASH_SCHEDULE: [Drug] = [
         doseB: 4
     ),
     Drug(
-        name: "Pressors",
-        doseUnits: "???",
-        concentration: Concentration(name: "???", doseUnitsPerBottleUnit: nil, bottleUnits: nil),
-        doseA: 0,
-        doseB: nil
-    ),
-    Drug(
         name: "Dextrose",
         doseUnits: "ml",
         concentration: nil,
