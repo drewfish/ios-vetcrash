@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9M4-0d-d36">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9M4-0d-d36">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -174,7 +174,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woP-Ce-2I7" userLabel="nameLabel">
-                                                    <rect key="frame" x="8" y="8" width="46.5" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="47" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="4ox-5q-LGJ"/>
                                                     </constraints>
@@ -183,7 +183,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S69-8W-aQF" userLabel="concentrationLabel">
-                                                    <rect key="frame" x="16" y="25" width="33.5" height="21"/>
+                                                    <rect key="frame" x="16" y="25" width="34" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="cz3-tt-zTs"/>
                                                     </constraints>
@@ -192,7 +192,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udm-46-luZ" userLabel="doseAQuantityLabel">
-                                                    <rect key="frame" x="538" y="8" width="53.5" height="21"/>
+                                                    <rect key="frame" x="538" y="8" width="54" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="5ji-n7-8T2"/>
                                                     </constraints>
@@ -201,7 +201,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLA-su-zXV" userLabel="doseAUnitsLabel">
-                                                    <rect key="frame" x="553" y="25" width="38.5" height="21"/>
+                                                    <rect key="frame" x="553" y="25" width="39" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="H6X-nh-Uhu"/>
                                                     </constraints>
@@ -235,7 +235,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="716-Gq-FHz" userLabel="nameLabel">
-                                                    <rect key="frame" x="8" y="8" width="46.5" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="47" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="x0f-GE-sxG"/>
                                                     </constraints>
@@ -244,7 +244,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-eZ-Bdf" userLabel="doseAQuantityLabel">
-                                                    <rect key="frame" x="464.5" y="8" width="53.5" height="21"/>
+                                                    <rect key="frame" x="464" y="8" width="54" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="x6f-zw-w3I"/>
                                                     </constraints>
@@ -253,7 +253,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS5-7s-dRY" userLabel="doseAUnitsLabel">
-                                                    <rect key="frame" x="479.5" y="25" width="38.5" height="21"/>
+                                                    <rect key="frame" x="479" y="25" width="39" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="BLq-1D-aiE"/>
                                                     </constraints>
@@ -280,7 +280,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij1-LA-sfX" userLabel="concentrationLabel">
-                                                    <rect key="frame" x="16" y="25" width="33.5" height="21"/>
+                                                    <rect key="frame" x="16" y="25" width="34" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="gbv-Vn-4XI"/>
                                                     </constraints>
@@ -320,7 +320,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-6D-Kbv" userLabel="nameLabel">
-                                                    <rect key="frame" x="300" y="8" width="46.5" height="21"/>
+                                                    <rect key="frame" x="300" y="8" width="47" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="kAc-jm-aa0"/>
                                                     </constraints>
@@ -329,7 +329,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jp9-ck-KiH" userLabel="doseAQuantityLabel">
-                                                    <rect key="frame" x="238" y="8" width="53.5" height="21"/>
+                                                    <rect key="frame" x="238" y="8" width="54" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="0L8-pa-2Uu"/>
                                                     </constraints>
@@ -338,7 +338,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Na-Rb-AIx" userLabel="doseAUnitsLabel">
-                                                    <rect key="frame" x="253" y="25" width="38.5" height="21"/>
+                                                    <rect key="frame" x="253" y="25" width="39" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="eKz-cj-Gbo"/>
                                                     </constraints>
@@ -347,7 +347,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYG-ca-eNt" userLabel="concentrationLabel">
-                                                    <rect key="frame" x="558" y="25" width="33.5" height="21"/>
+                                                    <rect key="frame" x="558" y="25" width="34" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="BA6-b5-1JN"/>
                                                     </constraints>
@@ -381,7 +381,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxf-j7-6mt" userLabel="nameLabel">
-                                                    <rect key="frame" x="8" y="8" width="46.5" height="21"/>
+                                                    <rect key="frame" x="8" y="8" width="47" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="wrP-gX-ifK"/>
                                                     </constraints>
@@ -390,7 +390,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j8n-eM-uoC" userLabel="doseAQuantityLabel">
-                                                    <rect key="frame" x="70" y="8" width="53.5" height="21"/>
+                                                    <rect key="frame" x="71" y="8" width="54" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="pjf-ny-xJH"/>
                                                     </constraints>
@@ -399,7 +399,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG4-Jq-nYS" userLabel="concentrationLabel">
-                                                    <rect key="frame" x="16" y="25" width="33.5" height="21"/>
+                                                    <rect key="frame" x="16" y="25" width="34" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="upZ-gs-yCM"/>
                                                     </constraints>
@@ -408,7 +408,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzG-Vt-orv" userLabel="doseAUnitsLabel">
-                                                    <rect key="frame" x="125.5" y="10" width="38.5" height="21"/>
+                                                    <rect key="frame" x="127" y="10" width="39" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="BLg-Kj-2aX"/>
                                                     </constraints>
@@ -492,47 +492,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5UI-2j-HuX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2010" y="-1523"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="J19-uW-3gr">
-            <objects>
-                <tableViewController id="acM-fC-JV3" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="rs2-Hq-7Rb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hqw-TH-kZy">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hqw-TH-kZy" id="dWr-63-pLA">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="acM-fC-JV3" id="3Wo-xe-u7K"/>
-                            <outlet property="delegate" destination="acM-fC-JV3" id="s5a-55-zW3"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="kxJ-co-mTC"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jkK-BG-DUb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="SfF-qk-hVE">
-            <objects>
-                <navigationController id="g0L-q0-ZLM" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XxY-2J-uWB">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="acM-fC-JV3" kind="relationship" relationship="rootViewController" id="BoK-mc-Eyd"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BKb-bn-Hel" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
         </scene>
     </scenes>
     <resources>

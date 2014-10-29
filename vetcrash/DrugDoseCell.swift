@@ -22,7 +22,7 @@ class DrugDoseCell: UITableViewCell {
         concentrationLabel.text = dose.concentration
         doseAUnitsLabel.text = dose.doseA.units
 
-        var doseA = DOSE_FORMATTER.stringFromNumber(dose.doseA.quantity)
+        var doseA = DOSE_FORMATTER.stringFromNumber(dose.doseA.quantity)!
         if let b = dose.doseB {
             if doseBQuantityLabel != nil {
                 doseBQuantityLabel.text = DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)
@@ -31,7 +31,7 @@ class DrugDoseCell: UITableViewCell {
                 }
             }
             else {
-                doseA = doseA + " - " + DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)
+                doseA = doseA + " - " + DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)!
             }
         }
         else {
