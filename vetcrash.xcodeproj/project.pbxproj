@@ -87,8 +87,8 @@
 		6159A09519FAC6D600A3A217 /* vetcrash */ = {
 			isa = PBXGroup;
 			children = (
+				616AD1151A01F09300AABE74 /* ViewControllers */,
 				6159A09819FAC6D600A3A217 /* AppDelegate.swift */,
-				61E51C2019FC7DA2006A4FEA /* CrashViewController.swift */,
 				61E51C1E19FC7564006A4FEA /* Data.swift */,
 				61E51C2219FC83BE006A4FEA /* DrugDoseCell.swift */,
 				616B014A19FAE64200657EC3 /* Extensions.swift */,
@@ -96,7 +96,6 @@
 				6159A0A119FAC6D600A3A217 /* LaunchScreen.xib */,
 				6159A09C19FAC6D600A3A217 /* Main.storyboard */,
 				6159A0BB19FAD00B00A3A217 /* Models.swift */,
-				6159A0B819FAC83B00A3A217 /* PatientViewController.swift */,
 				6159A09619FAC6D600A3A217 /* Supporting Files */,
 			);
 			path = vetcrash;
@@ -125,6 +124,15 @@
 				6159A0AD19FAC6D600A3A217 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		616AD1151A01F09300AABE74 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				61E51C2019FC7DA2006A4FEA /* CrashViewController.swift */,
+				6159A0B819FAC83B00A3A217 /* PatientViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
