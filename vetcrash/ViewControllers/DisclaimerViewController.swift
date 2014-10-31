@@ -10,10 +10,12 @@ import UIKit
 
 
 class DisclaimerViewController: UIViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.navigationBar.topItem?.title = tabBarItem.title!
+    }
 }
 

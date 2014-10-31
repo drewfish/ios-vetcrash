@@ -9,16 +9,17 @@
         <!--schedule-->
         <scene sceneID="YjL-Jq-Ylk">
             <objects>
-                <viewController id="yXv-AG-uRf" sceneMemberID="viewController">
+                <viewController id="yXv-AG-uRf" customClass="ScheduleViewController" customModule="vetcrash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="esM-MB-XVZ"/>
                         <viewControllerLayoutGuide type="bottom" id="LCy-ai-Io8"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Cpe-yP-gte">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="schedule" image="list" id="6SF-FU-n2x"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVN-fF-WjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -28,16 +29,17 @@
         <!--disclaimer-->
         <scene sceneID="1yq-92-IKO">
             <objects>
-                <viewController id="WJv-Nx-giF" sceneMemberID="viewController">
+                <viewController id="WJv-Nx-giF" customClass="DisclaimerViewController" customModule="vetcrash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0SV-8F-CAc"/>
                         <viewControllerLayoutGuide type="bottom" id="8re-oa-bl4"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x7b-nd-gUp">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="disclaimer" image="disclaimer" id="hDN-gQ-pQ3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7A-iO-Ubb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -47,16 +49,17 @@
         <!--about-->
         <scene sceneID="3bb-BJ-J5l">
             <objects>
-                <viewController id="QVc-Og-n7n" sceneMemberID="viewController">
+                <viewController id="QVc-Og-n7n" customClass="AboutViewController" customModule="vetcrash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xwa-Dq-8dM"/>
                         <viewControllerLayoutGuide type="bottom" id="TnN-FF-5cI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="g28-5N-Nid">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <tabBarItem key="tabBarItem" title="about" image="about" id="E0D-aj-Z92"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xeU-hu-0t1" userLabel="First Responder" sceneMemberID="firstResponder"/>
