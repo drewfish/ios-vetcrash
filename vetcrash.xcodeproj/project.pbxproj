@@ -18,6 +18,7 @@
 		6159A0B919FAC83B00A3A217 /* PatientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6159A0B819FAC83B00A3A217 /* PatientViewController.swift */; };
 		6159A0BC19FAD00B00A3A217 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6159A0BB19FAD00B00A3A217 /* Models.swift */; };
 		616B014B19FAE64200657EC3 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 616B014A19FAE64200657EC3 /* Extensions.swift */; };
+		617DFF2E1A0454C10003B2FC /* DrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617DFF2D1A0454C10003B2FC /* DrugCell.swift */; };
 		61E51C1F19FC7564006A4FEA /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E51C1E19FC7564006A4FEA /* Data.swift */; };
 		61E51C2119FC7DA2006A4FEA /* CrashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E51C2019FC7DA2006A4FEA /* CrashViewController.swift */; };
 		61E51C2319FC83BE006A4FEA /* DrugDoseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E51C2219FC83BE006A4FEA /* DrugDoseCell.swift */; };
@@ -49,6 +50,7 @@
 		6159A0B819FAC83B00A3A217 /* PatientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientViewController.swift; sourceTree = "<group>"; };
 		6159A0BB19FAD00B00A3A217 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		616B014A19FAE64200657EC3 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		617DFF2D1A0454C10003B2FC /* DrugCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugCell.swift; sourceTree = "<group>"; };
 		61E51C1E19FC7564006A4FEA /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		61E51C2019FC7DA2006A4FEA /* CrashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrashViewController.swift; sourceTree = "<group>"; };
 		61E51C2219FC83BE006A4FEA /* DrugDoseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrugDoseCell.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				616AD1151A01F09300AABE74 /* ViewControllers */,
 				6159A09819FAC6D600A3A217 /* AppDelegate.swift */,
 				61E51C1E19FC7564006A4FEA /* Data.swift */,
+				617DFF2D1A0454C10003B2FC /* DrugCell.swift */,
 				61E51C2219FC83BE006A4FEA /* DrugDoseCell.swift */,
 				616B014A19FAE64200657EC3 /* Extensions.swift */,
 				6159A09F19FAC6D600A3A217 /* Images.xcassets */,
@@ -137,9 +140,9 @@
 			children = (
 				6128968F1A04184300A2BB47 /* AboutViewController.swift */,
 				61E51C2019FC7DA2006A4FEA /* CrashViewController.swift */,
+				612896931A04188C00A2BB47 /* DisclaimerViewController.swift */,
 				6159A0B819FAC83B00A3A217 /* PatientViewController.swift */,
 				612896911A04186900A2BB47 /* ScheduleViewController.swift */,
-				612896931A04188C00A2BB47 /* DisclaimerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617DFF2E1A0454C10003B2FC /* DrugCell.swift in Sources */,
 				61E51C2319FC83BE006A4FEA /* DrugDoseCell.swift in Sources */,
 				6159A09919FAC6D600A3A217 /* AppDelegate.swift in Sources */,
 				61E51C1F19FC7564006A4FEA /* Data.swift in Sources */,

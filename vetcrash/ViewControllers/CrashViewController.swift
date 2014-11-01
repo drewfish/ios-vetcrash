@@ -33,18 +33,7 @@ class CrashViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var dose = doses[indexPath.row]
-        var id = "drugDose2Cell"
-        // TODO -- cleanup once I show Jeff
-        if currentPatient!.kgs == 120.0 {
-            id = "drugDoseCell"
-        }
-        if currentPatient!.kgs == 121.0 {
-            id = "drugDoseACell"
-            if dose.doseB != nil {
-                id = "drugDoseABCell"
-            }
-        }
-        var cell = tableView.dequeueReusableCellWithIdentifier(id) as DrugDoseCell
+        var cell = tableView.dequeueReusableCellWithIdentifier("drugDoseCell") as DrugDoseCell
         cell.setDrugDose(dose)
         return cell
     }

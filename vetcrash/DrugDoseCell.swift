@@ -14,8 +14,6 @@ class DrugDoseCell: UITableViewCell {
     @IBOutlet weak var concentrationLabel: UILabel!
     @IBOutlet weak var doseAQuantityLabel: UILabel!
     @IBOutlet weak var doseAUnitsLabel: UILabel!
-    @IBOutlet weak var doseBQuantityLabel: UILabel!
-    @IBOutlet weak var doseBUnitsLabel: UILabel!
 
     func setDrugDose(dose: DrugDose) {
         nameLabel.text = dose.drug
@@ -24,23 +22,7 @@ class DrugDoseCell: UITableViewCell {
 
         var doseA = DOSE_FORMATTER.stringFromNumber(dose.doseA.quantity)!
         if let b = dose.doseB {
-            if doseBQuantityLabel != nil {
-                doseBQuantityLabel.text = DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)
-                if doseBUnitsLabel != nil {
-                    doseBUnitsLabel.text = dose.doseB!.units
-                }
-            }
-            else {
-                doseA = doseA + " - " + DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)!
-            }
-        }
-        else {
-            if doseBQuantityLabel != nil {
-                doseBQuantityLabel.text = ""
-            }
-            if doseBUnitsLabel != nil {
-                doseBUnitsLabel.text = ""
-            }
+            doseA = doseA + " - " + DOSE_FORMATTER.stringFromNumber(dose.doseB!.quantity)!
         }
         doseAQuantityLabel.text = doseA
     }

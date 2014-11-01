@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9M4-0d-d36">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -17,10 +16,88 @@
                     <view key="view" contentMode="scaleToFill" id="Cpe-yP-gte">
                         <rect key="frame" x="0.0" y="64" width="600" height="487"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eRx-BI-ZBC">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugCell" rowHeight="58" id="x8P-Ko-mlr" userLabel="drugCell" customClass="DrugCell" customModule="vetcrash" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x8P-Ko-mlr" id="H3A-aJ-zUA">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRj-4C-gPv" userLabel="nameLabel">
+                                                    <rect key="frame" x="8" y="8" width="46.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="mwl-cl-5R9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eH-3B-UpR" userLabel="doseAQuantityLabel">
+                                                    <rect key="frame" x="70" y="8" width="53.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="OAc-Jn-kn5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8w-sa-45W" userLabel="concentrationLabel">
+                                                    <rect key="frame" x="16" y="25" width="33.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="s5B-Yh-Lr5"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7F-EI-VBQ" userLabel="doseAUnitsLabel">
+                                                    <rect key="frame" x="126" y="10" width="38.5" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="P4c-NK-wHc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="1eH-3B-UpR" firstAttribute="top" secondItem="H3A-aJ-zUA" secondAttribute="topMargin" id="0Rk-Dc-c6B"/>
+                                                <constraint firstItem="WRj-4C-gPv" firstAttribute="leading" secondItem="H3A-aJ-zUA" secondAttribute="leadingMargin" id="J4N-Mt-eWg"/>
+                                                <constraint firstItem="s7F-EI-VBQ" firstAttribute="leading" secondItem="1eH-3B-UpR" secondAttribute="trailing" constant="2" id="QaB-76-l4Y"/>
+                                                <constraint firstItem="1eH-3B-UpR" firstAttribute="leading" secondItem="WRj-4C-gPv" secondAttribute="trailing" constant="16" id="jbh-M5-nJY"/>
+                                                <constraint firstItem="i8w-sa-45W" firstAttribute="leading" secondItem="H3A-aJ-zUA" secondAttribute="leadingMargin" constant="8" id="jhW-zH-Wvn"/>
+                                                <constraint firstItem="s7F-EI-VBQ" firstAttribute="baseline" secondItem="1eH-3B-UpR" secondAttribute="baseline" constant="3" id="yOB-Zc-Chm"/>
+                                                <constraint firstItem="i8w-sa-45W" firstAttribute="top" secondItem="WRj-4C-gPv" secondAttribute="bottom" constant="-4" id="ywZ-Mw-ZPY"/>
+                                                <constraint firstItem="WRj-4C-gPv" firstAttribute="top" secondItem="H3A-aJ-zUA" secondAttribute="topMargin" id="zxP-co-3TI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="concentrationLabel" destination="i8w-sa-45W" id="RuA-ed-ugZ"/>
+                                            <outlet property="doseAQuantityLabel" destination="1eH-3B-UpR" id="f9F-nJ-A3M"/>
+                                            <outlet property="doseAUnitsLabel" destination="s7F-EI-VBQ" id="C7U-Qy-Koc"/>
+                                            <outlet property="nameLabel" destination="WRj-4C-gPv" id="Drb-MX-qjg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="eRx-BI-ZBC" secondAttribute="trailing" id="Fag-Qk-VMl"/>
+                            <constraint firstItem="eRx-BI-ZBC" firstAttribute="top" secondItem="esM-MB-XVZ" secondAttribute="bottom" id="KeZ-Ln-Fn2"/>
+                            <constraint firstItem="LCy-ai-Io8" firstAttribute="top" secondItem="eRx-BI-ZBC" secondAttribute="bottom" id="djX-DW-FfL"/>
+                            <constraint firstItem="eRx-BI-ZBC" firstAttribute="leading" secondItem="Cpe-yP-gte" secondAttribute="leading" id="lca-xw-4A9"/>
+                        </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="schedule" image="list" id="6SF-FU-n2x"/>
+                    <connections>
+                        <outlet property="tableView" destination="eRx-BI-ZBC" id="k7i-bL-0wf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fVN-fF-WjA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -234,214 +311,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugDoseACell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugDoseACell" rowHeight="58" id="pSe-io-FK4" customClass="DrugDoseCell" customModule="vetcrash" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pSe-io-FK4" id="Xoe-qP-Sxa">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woP-Ce-2I7" userLabel="nameLabel">
-                                                    <rect key="frame" x="8" y="8" width="47" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="4ox-5q-LGJ"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S69-8W-aQF" userLabel="concentrationLabel">
-                                                    <rect key="frame" x="16" y="25" width="34" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="cz3-tt-zTs"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udm-46-luZ" userLabel="doseAQuantityLabel">
-                                                    <rect key="frame" x="538" y="8" width="54" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="5ji-n7-8T2"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DLA-su-zXV" userLabel="doseAUnitsLabel">
-                                                    <rect key="frame" x="553" y="25" width="39" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="H6X-nh-Uhu"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="woP-Ce-2I7" firstAttribute="top" secondItem="Xoe-qP-Sxa" secondAttribute="topMargin" id="1vf-aA-tnY"/>
-                                                <constraint firstItem="S69-8W-aQF" firstAttribute="leading" secondItem="woP-Ce-2I7" secondAttribute="leading" constant="8" id="5o1-tJ-DD4"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="udm-46-luZ" secondAttribute="trailing" id="9w1-fY-xkZ"/>
-                                                <constraint firstItem="DLA-su-zXV" firstAttribute="top" secondItem="udm-46-luZ" secondAttribute="bottom" constant="-4" id="G85-xh-ha5"/>
-                                                <constraint firstItem="woP-Ce-2I7" firstAttribute="leading" secondItem="Xoe-qP-Sxa" secondAttribute="leadingMargin" id="LzH-33-d8W"/>
-                                                <constraint firstItem="udm-46-luZ" firstAttribute="top" secondItem="Xoe-qP-Sxa" secondAttribute="topMargin" id="Sy1-yg-9UF"/>
-                                                <constraint firstItem="S69-8W-aQF" firstAttribute="top" secondItem="woP-Ce-2I7" secondAttribute="bottom" constant="-4" id="jaV-jA-3eb"/>
-                                                <constraint firstItem="DLA-su-zXV" firstAttribute="trailing" secondItem="Xoe-qP-Sxa" secondAttribute="trailingMargin" id="p3S-bp-7Qu"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="concentrationLabel" destination="S69-8W-aQF" id="DNq-hI-FQA"/>
-                                            <outlet property="doseAQuantityLabel" destination="udm-46-luZ" id="73c-d3-29e"/>
-                                            <outlet property="doseAUnitsLabel" destination="DLA-su-zXV" id="3aB-v9-7cf"/>
-                                            <outlet property="nameLabel" destination="woP-Ce-2I7" id="Qqe-Q8-aoL"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugDoseABCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugDoseABCell" rowHeight="58" id="nbu-0j-AEj" customClass="DrugDoseCell" customModule="vetcrash" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nbu-0j-AEj" id="EvK-6p-pWn">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="716-Gq-FHz" userLabel="nameLabel">
-                                                    <rect key="frame" x="8" y="8" width="47" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="x0f-GE-sxG"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zfk-eZ-Bdf" userLabel="doseAQuantityLabel">
-                                                    <rect key="frame" x="464" y="8" width="54" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="x6f-zw-w3I"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZS5-7s-dRY" userLabel="doseAUnitsLabel">
-                                                    <rect key="frame" x="479" y="25" width="39" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="BLq-1D-aiE"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTA-pb-cpW" userLabel="doseBQuantityLabel">
-                                                    <rect key="frame" x="538" y="8" width="54" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="NMs-wF-dwo"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseB" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YvN-aG-YX4" userLabel="doseBUnitsLabel">
-                                                    <rect key="frame" x="553" y="25" width="39" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="A1e-MW-l5b"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ij1-LA-sfX" userLabel="concentrationLabel">
-                                                    <rect key="frame" x="16" y="25" width="34" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="gbv-Vn-4XI"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.60000002384185791" green="0.60000002384185791" blue="0.60000002384185791" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="qTA-pb-cpW" firstAttribute="top" secondItem="EvK-6p-pWn" secondAttribute="topMargin" id="22y-FP-mYN"/>
-                                                <constraint firstItem="ij1-LA-sfX" firstAttribute="top" secondItem="716-Gq-FHz" secondAttribute="bottom" constant="-4" id="D27-kz-8mJ"/>
-                                                <constraint firstItem="716-Gq-FHz" firstAttribute="leading" secondItem="EvK-6p-pWn" secondAttribute="leadingMargin" id="D8e-UK-YhK"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="qTA-pb-cpW" secondAttribute="trailing" id="IeM-Bw-gaK"/>
-                                                <constraint firstItem="Zfk-eZ-Bdf" firstAttribute="trailing" secondItem="ZS5-7s-dRY" secondAttribute="trailing" id="Ul8-br-BeU"/>
-                                                <constraint firstItem="ij1-LA-sfX" firstAttribute="leading" secondItem="716-Gq-FHz" secondAttribute="leading" constant="8" id="VBJ-kX-pkf"/>
-                                                <constraint firstItem="qTA-pb-cpW" firstAttribute="leading" secondItem="Zfk-eZ-Bdf" secondAttribute="trailing" constant="20" id="hLL-R9-Eh0"/>
-                                                <constraint firstItem="ZS5-7s-dRY" firstAttribute="top" secondItem="Zfk-eZ-Bdf" secondAttribute="bottom" constant="-4" id="j3S-4f-O8k"/>
-                                                <constraint firstItem="Zfk-eZ-Bdf" firstAttribute="top" secondItem="EvK-6p-pWn" secondAttribute="topMargin" id="kDO-FB-Ix4"/>
-                                                <constraint firstItem="716-Gq-FHz" firstAttribute="top" secondItem="EvK-6p-pWn" secondAttribute="topMargin" id="on5-3a-yKj"/>
-                                                <constraint firstItem="YvN-aG-YX4" firstAttribute="trailing" secondItem="EvK-6p-pWn" secondAttribute="trailingMargin" id="t1S-Fo-up9"/>
-                                                <constraint firstItem="YvN-aG-YX4" firstAttribute="top" secondItem="qTA-pb-cpW" secondAttribute="bottom" constant="-4" id="yww-Bi-lAy"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="concentrationLabel" destination="ij1-LA-sfX" id="9le-r3-Cqi"/>
-                                            <outlet property="doseAQuantityLabel" destination="Zfk-eZ-Bdf" id="qKf-lJ-IqL"/>
-                                            <outlet property="doseAUnitsLabel" destination="ZS5-7s-dRY" id="3sT-G6-pl4"/>
-                                            <outlet property="doseBQuantityLabel" destination="qTA-pb-cpW" id="bPg-iK-vAa"/>
-                                            <outlet property="doseBUnitsLabel" destination="YvN-aG-YX4" id="fDP-fY-GGL"/>
-                                            <outlet property="nameLabel" destination="716-Gq-FHz" id="tJj-8X-bza"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugDoseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugDoseCell" rowHeight="58" id="7GL-ru-1cI" customClass="DrugDoseCell" customModule="vetcrash" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7GL-ru-1cI" id="59c-AM-TNk">
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JyI-6D-Kbv" userLabel="nameLabel">
-                                                    <rect key="frame" x="300" y="8" width="47" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="kAc-jm-aa0"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jp9-ck-KiH" userLabel="doseAQuantityLabel">
-                                                    <rect key="frame" x="238" y="8" width="54" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="0L8-pa-2Uu"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="doseA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Na-Rb-AIx" userLabel="doseAUnitsLabel">
-                                                    <rect key="frame" x="253" y="25" width="39" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="eKz-cj-Gbo"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conc." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EYG-ca-eNt" userLabel="concentrationLabel">
-                                                    <rect key="frame" x="558" y="25" width="34" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="BA6-b5-1JN"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="EYG-ca-eNt" secondAttribute="trailing" id="IvN-gM-PES"/>
-                                                <constraint firstItem="0Na-Rb-AIx" firstAttribute="trailing" secondItem="jp9-ck-KiH" secondAttribute="trailing" id="RXw-HL-FGZ"/>
-                                                <constraint firstItem="0Na-Rb-AIx" firstAttribute="top" secondItem="jp9-ck-KiH" secondAttribute="bottom" constant="-4" id="aSo-Jk-pFu"/>
-                                                <constraint firstItem="EYG-ca-eNt" firstAttribute="top" secondItem="JyI-6D-Kbv" secondAttribute="bottom" constant="-4" id="bWj-fi-zsp"/>
-                                                <constraint firstItem="JyI-6D-Kbv" firstAttribute="top" secondItem="59c-AM-TNk" secondAttribute="topMargin" id="n1R-rH-838"/>
-                                                <constraint firstItem="jp9-ck-KiH" firstAttribute="top" secondItem="59c-AM-TNk" secondAttribute="topMargin" id="ogI-mi-9OK"/>
-                                                <constraint firstItem="JyI-6D-Kbv" firstAttribute="leading" secondItem="jp9-ck-KiH" secondAttribute="trailing" constant="8" id="uGR-5n-Op0"/>
-                                                <constraint firstItem="JyI-6D-Kbv" firstAttribute="leading" secondItem="59c-AM-TNk" secondAttribute="centerX" id="xVO-bf-oP6"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="concentrationLabel" destination="EYG-ca-eNt" id="hj2-er-yZ6"/>
-                                            <outlet property="doseAQuantityLabel" destination="jp9-ck-KiH" id="gzH-SI-tJ2"/>
-                                            <outlet property="doseAUnitsLabel" destination="0Na-Rb-AIx" id="m4K-jn-Yef"/>
-                                            <outlet property="nameLabel" destination="JyI-6D-Kbv" id="Qfq-Uz-M5q"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugDose2Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugDose2Cell" rowHeight="58" id="5Mh-t4-faE" customClass="DrugDoseCell" customModule="vetcrash" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="drugDoseCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="drugDoseCell" rowHeight="58" id="5Mh-t4-faE" userLabel="drugDoseCell" customClass="DrugDoseCell" customModule="vetcrash" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5Mh-t4-faE" id="s4H-j3-mvx">
